@@ -118,6 +118,36 @@ img {
     height: auto;
 }
 
+.tooltip {
+    position: relative;
+    cursor: pointer;
+   
+  }
+
+  .tooltip::after {
+    content: attr(my-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #66ff00;
+    color: #000;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    white-space: nowrap;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+
+    z-index: 999;
+  }
+
+  .tooltip:hover::after {
+    opacity: 1;
+  }
 
 /* Reusable class */
 .container {
@@ -203,19 +233,20 @@ img {
     width: 10px;
     height: 3px;
     border-radius: 50px;
-    background-color: rgb(199, 0, 0);
+    background-color: rgb(79, 79, 79);
+
     filter: blur(1px);
     transition: background-color .5s;
 }
 
-.nav_link:hover::before,
+
 .nav_link.active-link::before {
     background: linear-gradient(rgb(0, 255, 0), rgb(0, 255, 0));
 
 }
 
 .nav_link:hover {
-    color: rgb(0, 255, 0);
+    color: rgba(0, 255, 0, 0.546);
     opacity: 1;
 }
 
@@ -227,12 +258,11 @@ img {
 /* .nav:not(:hover) .nav_link{
     opacity: .2;
 } */
-.nav:not(:hover) .nav_link::before {
+/* .nav:not(:hover) .nav_link::before {
     background-color: rgb(79, 79, 79);
-}
+} */
 
 
-/* Active Link */
 
 
 /* HOME */
@@ -688,21 +718,23 @@ textarea {
 .input-field input:active+label,
 .input-field input:focus+label {
     top: 0;
-    background-color: var(--first-color);
+    background-color: var(--white-color);
     font-size: var(--smaller-font-size);
-    color: var(--white-color);
+    color: var(--black-color);
     padding: 0 0.5rem;
     border-radius: .2rem;
 }
+
+
 
 
 .textarea-field textarea:hover+label,
 .textarea-field textarea:active+label,
 .textarea-field textarea:focus+label {
     top: 0;
-    background-color: var(--first-color);
+    background-color: var(--white-color);
     font-size: var(--smaller-font-size);
-    color: var(--white-color);
+    color: var(--black-color);
     padding: 0 0.5rem;
     border-radius: .2rem;
 }
@@ -732,8 +764,10 @@ textarea {
 .contact_message {
     position: fixed;
     background-color: rgb(255, 201, 201);
-    /* backdrop-filter: blur(25px); */
-    border-left: 5px solid red;
+    background: linear-gradient(
+        90deg, #4b0202 0%, #171717 70%
+    );
+    backdrop-filter: blur(5px);
     border-radius: .3rem;
     padding: 1rem;
     width: 100%;
@@ -741,43 +775,31 @@ textarea {
     right: -100%;
     top: .5rem;
     font-size: var(--font-medium);
-    color: red;
+    color: var(--white-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: right .5s ease, opacity .4s;
+    transition: right .5s ease;
     
 }
+.contact_message .message{
+    font-weight: var(--font-semibold);
 
-.showS{
-    animation: shake_alertBox 1s ease forwards;
-
+}
+.alertbody{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.contact_message .warnicn{
+    color: white;
+    border-radius: 5px;
+    font-size: 1.7rem;
 }
 
 
 
-@keyframes shake_alertBox {
-  0%{
-    transform: translateX(-100%);
-  }
-  40%{
-    transform: translateX(-10%);
-  }
-  80%{
-    transform: translateX(0);
-  }
-  100%{
-    transform: translateX(-10px);
-  }
-  
-    
-}
-
-
-
-
-
-
+/* Close Message Button */
 .close-message {
     font-size: 1.5rem;
     color: red;
@@ -980,12 +1002,18 @@ textarea {
 
 }
 
+@media screen and (max-width: 550px) {
+    
+    .contact_message {
+        width: 90%;
+    }
+    
+}
+
 @media screen and (min-width: 500px) {
     .profile_img{
         transform: translateY(2.5rem) scale(1.1);
-        /* align-self: flex-end; */
     }
-    
 }
 
 @media (min-width: 540px) and (max-width: 768px){
