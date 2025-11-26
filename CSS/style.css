@@ -1,15 +1,13 @@
 /* Font Family */
 @font-face {
-    font-family: "Montserrat Alternate";
-    src: url('./Assets/Fonts/MontserratAlternates-Regular.woff2')
-    format("woff2");
+    font-family: "Montserrat_Alternate";
+    src: url('/Assets/Fonts/MontserratAlternates-Regular.woff2') format("woff2");
 }
 
 /* Font Family */
 @font-face {
-    font-family: "Grechen Fuemen";
-    src: url('./Assets/Fonts/GrechenFuemen-Regular.woff2')
-    format("woff2");
+    font-family: "Grechen_Fuemen";
+    src: url('/Assets/Fonts/GrechenFuemen-Regular.woff2') format("woff2");
 }
 
 /* root Variable CSS */
@@ -28,8 +26,8 @@
             hsl(var(--hue), 80%, 20%) 360deg);
 
     /* Font and Typography */
-    --body-font: "Montserrat Alternate", sans-serif;
-    --second-font: "Grechen Fuemen", arial;
+    --body-font: "Montserrat_Alternate", sans-serif;
+    --second-font: "Grechen_Fuemen", arial;
     --biggest-font-size: 2.5rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
