@@ -1,13 +1,13 @@
 /* Font Family */
 @font-face {
     font-family: "Montserrat_Alternate";
-    src: url('/Assets/Fonts/MontserratAlternates-Regular.woff2') format("woff2");
+    src: url('../Assets/Fonts/MontserratAlternates-Regular.woff2') format("woff2");
 }
 
 /* Font Family */
 @font-face {
     font-family: "Grechen_Fuemen";
-    src: url('/Assets/Fonts/GrechenFuemen-Regular.woff2') format("woff2");
+    src: url('../Assets/Fonts/GrechenFuemen-Regular.woff2') format("woff2");
 }
 
 /* root Variable CSS */
