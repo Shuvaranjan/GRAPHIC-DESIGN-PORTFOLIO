@@ -37,7 +37,7 @@ contactForm.addEventListener("submit", function (event) {
    // Empty field check
 if (user_name.value.trim() == "" || user_message.value.trim() == "" || gmailInput.value.trim() == "" || user_name.value.trim() == "" && user_message.value.trim() == "" || user_name.value.trim() == "" && gmailInput.value.trim() == "" || gmailInput.value.trim() == "" && user_message.value.trim() == "") {
 
-    messageBox.style.right = "0";
+    messageBox.style.right = "1rem";
     message.innerHTML = "Please Fill the Empty Section";
 
     clearTimeout(hideTimeout);
@@ -51,7 +51,7 @@ if (user_name.value.trim() == "" || user_message.value.trim() == "" || gmailInpu
 // Gmail validation
 if (!gmail_Format.test(gmailInput.value.trim())) {
 
-    messageBox.style.right = "0";
+    messageBox.style.right = "1rem";
     message.innerHTML = "Please enter a valid Gmail address!";
 
     clearTimeout(hideTimeout);

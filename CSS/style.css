@@ -1,13 +1,13 @@
 /* Font Family */
 @font-face {
     font-family: "Montserrat Alternate";
-    src: url('./Assets/Fonts/MontserratAlternates-Regular.woff2');
+    src: url('/Assets/Fonts/MontserratAlternates-Regular.woff2');
 }
 
 /* Font Family */
 @font-face {
     font-family: "Grechen Fuemen";
-    src: url('./Assets/Fonts/GrechenFuemen-Regular.woff2');
+    src: url('/Assets/Fonts/GrechenFuemen-Regular.woff2');
 }
 
 /* root Variable CSS */
@@ -27,7 +27,7 @@
 
     /* Font and Typography */
     --body-font: "Montserrat Alternate", sans-serif;
-    --second-font: "Grechen Fuemen", cursive;
+    --second-font: "Grechen Fuemen", arial;
     --biggest-font-size: 2.5rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
@@ -731,21 +731,46 @@ textarea {
 
 .contact_message {
     position: fixed;
-    background-color: rgba(255, 0, 0, 0.212);
-    border: 1px solid rgba(255, 0, 0, 0.342);
-    border-radius: .5rem;
+    background-color: rgb(255, 201, 201);
+    /* backdrop-filter: blur(25px); */
+    border-left: 5px solid red;
+    border-radius: .3rem;
     padding: 1rem;
     width: 100%;
     max-width: 500px;
     right: -100%;
-    top: 0%;
+    top: .5rem;
     font-size: var(--font-medium);
     color: red;
-    text-shadow: 0 0 5px red;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: right .5s ease;
+    transition: right .5s ease, opacity .4s;
+    
+}
+
+.showS{
+    animation: shake_alertBox 1s ease forwards;
+
+}
+
+
+
+@keyframes shake_alertBox {
+  0%{
+    transform: translateX(-100%);
+  }
+  40%{
+    transform: translateX(-10%);
+  }
+  80%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-10px);
+  }
+  
+    
 }
 
 
@@ -754,12 +779,19 @@ textarea {
 
 
 .close-message {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: red;
     background-color: white;
     border-radius: 100%;
     text-shadow: none !important;
     cursor: pointer;
+    transition: transform .2s   ;
+}
+.close-message:hover{
+    transform: scale(1.1);
+}
+.close-message:active{
+    transform: scale(.7);
 }
 
 
