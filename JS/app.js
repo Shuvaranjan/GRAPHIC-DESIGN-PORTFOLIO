@@ -126,5 +126,3 @@ sReveal.reveal('.skills', {origin: 'left', delay: 1000});
 sReveal.reveal('.about', {origin: 'right', delay: 1200});
 sReveal.reveal('.projects_card, .services_card, .experiance_card', {interval: 100});
 // sReveal.reveal('.footer', {interval: 100});
-
-console.log(sReveal)
