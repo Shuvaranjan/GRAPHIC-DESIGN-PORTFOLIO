@@ -69,7 +69,11 @@ contactForm.addEventListener("submit", function (event) {
 
     // If valid → Submit Web3Forms
     contactForm.submit();
-    contactForm.reset();
+    window.onpageshow = () => {
+    window.location.reload();
+};
+
+    
 
 });
 
