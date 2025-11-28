@@ -33,54 +33,55 @@ contactForm.addEventListener("submit", function (event) {
 
     // Stop form first
     event.preventDefault();
-   
-   // Empty field check
-if (user_name.value.trim() == "" || user_message.value.trim() == "" || gmailInput.value.trim() == "" || user_name.value.trim() == "" && user_message.value.trim() == "" || user_name.value.trim() == "" && gmailInput.value.trim() == "" || gmailInput.value.trim() == "" && user_message.value.trim() == "") {
 
-    messageBox.style.right = "1rem";
-    message.innerHTML = "Please Fill the Empty Section";
+    // Empty field check
+    if (user_name.value.trim() == "" || user_message.value.trim() == "" || gmailInput.value.trim() == "" || user_name.value.trim() == "" && user_message.value.trim() == "" || user_name.value.trim() == "" && gmailInput.value.trim() == "" || gmailInput.value.trim() == "" && user_message.value.trim() == "") {
 
-    clearTimeout(hideTimeout);
-    hideTimeout = setTimeout(() => {
-        hideMessage();
-    }, 5000);
+        messageBox.style.right = "1rem";
+        message.innerHTML = "Please Fill the Empty Section";
 
-    return;
-}
+        clearTimeout(hideTimeout);
+        hideTimeout = setTimeout(() => {
+            hideMessage();
+        }, 5000);
 
-// Gmail validation
-if (!gmail_Format.test(gmailInput.value.trim())) {
+        return;
+    }
 
-    messageBox.style.right = "1rem";
-    message.innerHTML = "Please enter a valid Gmail address!";
+    // Gmail validation
+    if (!gmail_Format.test(gmailInput.value.trim())) {
 
-    clearTimeout(hideTimeout);
-    hideTimeout = setTimeout(() => {
-        hideMessage();
-    }, 5000);
+        messageBox.style.right = "1rem";
+        message.innerHTML = "Please enter a valid Gmail address!";
 
-    return;
-}
+        clearTimeout(hideTimeout);
+        hideTimeout = setTimeout(() => {
+            hideMessage();
+        }, 5000);
 
-// Hide message function
-function hideMessage() {
-    messageBox.style.right = "-100%";
-}
+        return;
+    }
+
+    // Hide message function
+    function hideMessage() {
+        messageBox.style.right = "-100%";
+    }
 
     // If valid → Submit Web3Forms
     contactForm.submit();
+    contactForm.reset();
 
 });
 
-closeIcon.addEventListener("click", function(){
+closeIcon.addEventListener("click", function () {
     messageBox.style.right = "-100%";
 });
 
 
 // Scroll Up Button
-const scrollUp = () =>{
+const scrollUp = () => {
     const scrollUp = document.getElementById('scroll-up')
-    
+
     this.scrollY >= 350 ? scrollUp.classList.add('show-scrollUp') : scrollUp.classList.remove('show-scrollUp');
 }
 window.addEventListener('scroll', scrollUp);
@@ -92,16 +93,16 @@ const sections = document.querySelectorAll('section[id]');
 
 const scrollActive = () => {
     const scrollDown = window.scrollY;
-    
+
     sections.forEach(current => {
         const sectionHeight = current.offsetHeight,
-        sectionTop = current.offsetTop - 58,
-        sectionId = current.getAttribute('id'),
-        sectionsClass = document.querySelector('.nav_list a[href*=' + sectionId + ']')
+            sectionTop = current.offsetTop - 58,
+            sectionId = current.getAttribute('id'),
+            sectionsClass = document.querySelector('.nav_list a[href*=' + sectionId + ']')
 
-        if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
+        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
             sectionsClass.classList.add('active-link');
-        }else{
+        } else {
             sectionsClass.classList.remove('active-link');
         }
     })
@@ -113,7 +114,7 @@ window.addEventListener('scroll', scrollActive);
 // ScrollReveal Animation (When Scroll windows animate sections)
 const sReveal = ScrollReveal({
     origin: 'top',
-    distance : '60px',
+    distance: '60px',
     duration: 2500,
     delay: 400,
     reset: 'true'
@@ -121,8 +122,8 @@ const sReveal = ScrollReveal({
 })
 
 sReveal.reveal('.profile, .contact_form');
-sReveal.reveal('.info', {origin: 'left', delay: 800});
-sReveal.reveal('.skills', {origin: 'left', delay: 1000});
-sReveal.reveal('.about', {origin: 'right', delay: 1200});
-sReveal.reveal('.projects_card, .services_card, .experiance_card', {interval: 100});
+sReveal.reveal('.info', { origin: 'left', delay: 800 });
+sReveal.reveal('.skills', { origin: 'left', delay: 1000 });
+sReveal.reveal('.about', { origin: 'right', delay: 1200 });
+sReveal.reveal('.projects_card, .services_card, .experiance_card', { interval: 100 });
 // sReveal.reveal('.footer', {interval: 100});
