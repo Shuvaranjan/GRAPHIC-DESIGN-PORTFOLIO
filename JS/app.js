@@ -67,17 +67,17 @@ contactForm.addEventListener("submit", function (event) {
         messageBox.style.right = "-100%";
     }
 
+     // If valid → Submit Web3Forms
+    contactForm.submit();
+
+
+    // Reload page to reset form
     window.addEventListener("pageshow", function (event) {
         if (event.persisted) {
             // If the page was cached and user returns, reload it
             window.location.reload();
         }
     });
-
-    // If valid → Submit Web3Forms
-    contactForm.submit();
-   
-
 
 });
 
