@@ -121,7 +121,6 @@ img {
 .tooltip {
     position: relative;
     cursor: pointer;
-   
   }
 
   .tooltip::after {
