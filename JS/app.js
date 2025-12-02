@@ -1,7 +1,26 @@
 // Reset the form fields when the page loads
 window.onload = function () {
-    document.getElementById("contact-form").reset();
+    const frame = document.querySelector(".frame");
+    document.getElementById("contact-form")?.reset();
+
+    // Show animation
+    // frame.style.display = "block";
+    frame.style.transform = "translateY(0)";
+
+    document.body.style.overflow = "hidden";
+
+    // Hide smoothly after 2 seconds
+    setTimeout(() => {
+        frame.style.transform = "translateY(-100%)";
+
+        // Wait until transition fully ends before hiding
+        setTimeout(() => {
+            document.body.style.overflow = "auto";
+            frame.style.display = "none";
+        }, 1500);
+    }, 2000);
 };
+
 
 // Work when something have on input field
 document.querySelectorAll(".input-field input, .textarea-field textarea")
@@ -67,7 +86,7 @@ contactForm.addEventListener("submit", function (event) {
         messageBox.style.right = "-100%";
     }
 
-     // If valid → Submit Web3Forms
+    // If valid → Submit Web3Forms
     contactForm.submit();
 
 
@@ -125,7 +144,7 @@ const sReveal = ScrollReveal({
     distance: '60px',
     duration: 2500,
     delay: 400,
-    reset: 'true'
+    // reset: 'true'
 
 })
 
@@ -134,4 +153,7 @@ sReveal.reveal('.info', { origin: 'left', delay: 800 });
 sReveal.reveal('.skills', { origin: 'left', delay: 1000 });
 sReveal.reveal('.about', { origin: 'right', delay: 1200 });
 sReveal.reveal('.projects_card, .services_card, .experiance_card', { interval: 100 });
-// sReveal.reveal('.footer', {interval: 100});
+
+
+
+

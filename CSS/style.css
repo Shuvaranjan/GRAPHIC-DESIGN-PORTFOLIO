@@ -10,7 +10,7 @@
     src: url('../Fonts/GrechenFuemen-Regular.woff2');
 }
 
-/* root Variable CSS */
+/* ====================  root Variable CSS  ============================ */
 :root {
     --hue: 358;
     --first-color: hsl(var(--hue), 80%, 49%);
@@ -48,6 +48,8 @@
 }
 
 
+
+
 /* Responsive CSS */
 @media screen and (min-width: 1168px) {
     :root {
@@ -62,7 +64,7 @@
 }
 
 
-/* BoilerPlate */
+
 * {
     margin: 0;
     padding: 0;
@@ -82,7 +84,6 @@ button {
 }
 
 body {
-    /* background-color: var(--body-color); */
     background-image: radial-gradient(circle, #121212, #0e0e0e, #0a0a0a, #050505, #000000);
     color: var(--white-color);
 }
@@ -121,9 +122,9 @@ img {
 .tooltip {
     position: relative;
     cursor: pointer;
-  }
+}
 
-  .tooltip::after {
+.tooltip::after {
     content: attr(my-tooltip);
     position: absolute;
     bottom: 120%;
@@ -142,11 +143,11 @@ img {
     transition: opacity 0.2s ease-in-out;
 
     z-index: 999;
-  }
+}
 
-  .tooltip:hover::after {
+.tooltip:hover::after {
     opacity: 1;
-  }
+}
 
 /* Reusable class */
 .container {
@@ -177,8 +178,7 @@ img {
 
 
 
-
-/* Navbar */
+/* =========== Navbar =========== */
 .nav {
     position: fixed;
     bottom: 1.5rem;
@@ -213,7 +213,6 @@ img {
     height: 2.5rem;
     background-color: transparent;
     color: rgba(255, 255, 255, 0.189);
-    /* opacity: .2; */
     font-size: 1.5rem;
     border-radius: 50%;
     display: grid;
@@ -264,7 +263,7 @@ img {
 
 
 
-/* HOME */
+/* =================== Home Section ===================== */
 /* Profile */
 .profile {
     position: relative;
@@ -362,7 +361,7 @@ img {
 }
 
 
-/* About */
+/* ====================== About Section ======================= */
 .about_name {
     font-size: var(--normal-font-size);
     font-weight: var(--font-regular);
@@ -425,7 +424,7 @@ img {
 }
 
 
-/* Skills */
+/* ====================== Skills Section ======================= */
 .skills_title {
     font-size: var(--h2-font-size);
 }
@@ -501,7 +500,7 @@ img {
 }
 
 
-/* Projects */
+/* ====================== Projects Section ======================= */
 .projects_card {
     background-color: var(--container-color);
     padding: 1.5rem;
@@ -581,7 +580,7 @@ img {
 }
 
 
-/* Services */
+/* ====================== Services Section ======================= */
 .services_card {
     background-color: var(--container-color);
     padding: 4rem 1.5rem 3.5rem 1.5rem;
@@ -627,7 +626,7 @@ img {
 }
 
 
-/* Experiance */
+/* ====================== Experience Section ======================= */
 .experiance_container {
     row-gap: 2rem;
 }
@@ -663,7 +662,7 @@ img {
 }
 
 
-/* Contact */
+/* ====================== Contact Section ======================= */
 .contact_group,
 .contact_form {
     gap: 1rem;
@@ -763,9 +762,7 @@ textarea {
 .contact_message {
     position: fixed;
     background-color: rgb(255, 201, 201);
-    background: linear-gradient(
-        90deg, #4b0202 0%, #171717 70%
-    );
+    background: linear-gradient(90deg, #4b0202 0%, #171717 70%);
     backdrop-filter: blur(5px);
     border-radius: .3rem;
     padding: 1rem;
@@ -779,18 +776,21 @@ textarea {
     align-items: center;
     justify-content: space-between;
     transition: right .5s ease;
-    
+
 }
-.contact_message .message{
+
+.contact_message .message {
     font-weight: var(--font-semibold);
 
 }
-.alertbody{
+
+.alertbody {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.contact_message .warnicn{
+
+.contact_message .warnicn {
     color: white;
     border-radius: 5px;
     font-size: 1.7rem;
@@ -806,12 +806,14 @@ textarea {
     border-radius: 100%;
     text-shadow: none !important;
     cursor: pointer;
-    transition: transform .2s   ;
+    transition: transform .2s;
 }
-.close-message:hover{
+
+.close-message:hover {
     transform: scale(1.1);
 }
-.close-message:active{
+
+.close-message:active {
     transform: scale(.7);
 }
 
@@ -826,7 +828,7 @@ textarea {
 
 
 
-/* Footer Section */
+/* ====================== Footer Section ======================= */
 .footer {
     padding-block: 2rem 8rem;
     border-top: 1px solid var(--container-color);
@@ -897,7 +899,7 @@ textarea {
 
 
 
-/* Scrollbar */
+/* ====================== Scrollbar Styling ======================= */
 ::-webkit-scrollbar {
     width: 0.6rem;
     border-radius: .5rem;
@@ -920,7 +922,7 @@ textarea {
 
 
 
-/* Scroll Up */
+/* ====================== Scroll Up Button ======================= */
 .scrollup {
     position: fixed;
     right: 1rem;
@@ -1002,32 +1004,34 @@ textarea {
 }
 
 @media screen and (max-width: 550px) {
-    
+
     .contact_message {
         width: 90%;
     }
-    
+
 }
 
 @media screen and (min-width: 500px) {
-    .profile_img{
+    .profile_img {
         transform: translateY(2.5rem) scale(1.1);
     }
 }
 
-@media (min-width: 540px) and (max-width: 768px){
-    .profile_img{
-        transform: translateY(7rem)  !important;
+@media (min-width: 540px) and (max-width: 768px) {
+    .profile_img {
+        transform: translateY(7rem) !important;
     }
 }
-@media (min-width: 768px) and (max-width: 800px){
-    .profile_img{
-        transform: translateY(3rem) scale(1.5)  !important;
+
+@media (min-width: 768px) and (max-width: 800px) {
+    .profile_img {
+        transform: translateY(3rem) scale(1.5) !important;
     }
 }
-@media (min-width: 800px) and (max-width: 1200px){
-    .profile_img{
-        transform: translateY(2rem) scale(1.5)  !important;
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .profile_img {
+        transform: translateY(2rem) scale(1.5) !important;
     }
 }
 
@@ -1136,7 +1140,7 @@ textarea {
         padding: 2rem;
     }
 
-   
+
 
     .profile_img {
         width: 420px;
@@ -1232,12 +1236,12 @@ textarea {
 
 
 
-  .contact_form{
-    grid-template-columns: 700px;
-    justify-content: center;
-  }
+    .contact_form {
+        grid-template-columns: 700px;
+        justify-content: center;
+    }
 
- 
+
 
     .footer {
         padding-top: 3rem;
@@ -1280,3 +1284,62 @@ textarea {
     }
 }
 
+
+
+
+
+/* ============================== Landing Page ================================== */
+.frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    opacity: 1;
+    transform: translateY(-100%);
+    transition: opacity 1s ease, transform 1.5s ease;
+}
+
+.frame.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.frame.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.frame .image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-bottom: 3px dashed rgba(255, 255, 255, 0.653);
+}
+
+
+
+@media (max-width: 956px) {
+    .image {
+        display: none;
+    }
+
+    .frame {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background-image: url('../Assets/Images/mobile.webp');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1000;
+        opacity: 1;
+        transform: translateY(-100%);
+        transition: opacity 1s ease, transform 1.5s ease;
+    }
+}
