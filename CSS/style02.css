@@ -1,0 +1,49 @@
+.nav {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 50px;
+    background-color: transparent;
+    color: red;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px dotted rgba(255, 0, 0, 0.475);
+    width: 100px;
+    margin-inline: auto;
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    z-index: var(--z-fixed);
+    transition: background-color .5s;
+}
+
+.nav:hover {
+    background-color: red;
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_link {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    color: rgb(255, 0, 0);
+    font-size: 1.5rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    transition: background-color .3s;
+    transition: color .5s ease, transform .4s ease;
+}
+
+.nav:hover .nav_link {
+    color: white;
+}
+
+.nav_link::before {
+    display: none !important;
+}
