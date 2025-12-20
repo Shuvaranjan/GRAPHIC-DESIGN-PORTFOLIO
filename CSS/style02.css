@@ -47,3 +47,35 @@
 .nav_link::before {
     display: none !important;
 }
+
+.backHome {
+    border-radius: 50%;
+    opacity: .7;
+    color: white;
+    transition: opacity .4s ease, color .4s ease;
+}
+
+.backHome:hover {
+    opacity: 1;
+    color: red;
+}
+
+
+.section-title a {
+    color: white;
+}
+
+.section-title {
+    background-image: linear-gradient(to right, rgb(255, 55, 0), rgb(255, 102, 0), rgb(0, 238, 255), rgb(255, 55, 0), rgb(255, 102, 0));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200%;
+    animation: animateBG 5s linear infinite;
+}
+
+@keyframes animateBG {
+    to {
+        background-position: 200%;
+    }
+}

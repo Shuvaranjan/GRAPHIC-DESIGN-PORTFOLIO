@@ -152,7 +152,7 @@ sReveal.reveal('.profile, .contact_form');
 sReveal.reveal('.info', { origin: 'left', delay: 800 });
 sReveal.reveal('.skills', { origin: 'left', delay: 1000 });
 sReveal.reveal('.about', { origin: 'right', delay: 1200 });
-sReveal.reveal('.projects_card, .services_card, .experiance_card', { interval: 100 });
+sReveal.reveal('.projects_card, .services_card, .experiance_card, .section-title', { interval: 100 });
 
 
 
