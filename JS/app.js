@@ -143,8 +143,8 @@ const sReveal = ScrollReveal({
     origin: 'top',
     distance: '60px',
     duration: 2500,
-    delay: 400,
-    // reset: 'true'
+    delay: 350,
+    reset: 'true'
 
 })
 
@@ -154,6 +154,54 @@ sReveal.reveal('.skills', { origin: 'left', delay: 1000 });
 sReveal.reveal('.about', { origin: 'right', delay: 1200 });
 sReveal.reveal('.projects_card, .services_card, .experiance_card, .section-title', { interval: 100 });
 
+
+
+
+// GSAP Animation (When Scroll windows animate sections)
+// gsap.from("#projects",{
+//     // scale:0,
+//     y:200,
+//     opacity:0,
+//     duration:5,
+//     scrollTrigger:{
+//         trigger:"#projects",
+//         start:"top 50%",    
+//         end:"top 30%",
+//         scroller:"body",
+//         scrub:2,
+        
+//     }
+// })
+
+// gsap.from(".services_container",{
+//     x:2100,
+//     opacity:0,
+//     duration:2,
+//     scrollTrigger:{
+//         trigger:".services_container",
+//         start:"top 80%",    
+//         end:"top 60%",
+//         scroller:"body",
+//         scrub:1,
+//         markers:true
+//     }
+// })
+
+
+
+// gsap.from("#experiance",{
+//     y: 100,
+//     opacity:0,
+//     duration:3,
+//     scrollTrigger:{
+//         trigger:"#experiance",
+//         start:"top 50%",    
+//         end:"top 20%",
+//         scroller:"body",
+//         scrub:1,
+        
+//     }
+// })
 
 
 
