@@ -983,7 +983,7 @@ textarea {
 .profile_img,
 .about_img,
 .info_img {
-    filter: drop-shadow(0 0 55px rgba(0, 0, 0, 0.703));
+    filter: drop-shadow(0 0 80px rgba(32, 1, 1, 0.498));
     transition: filter .3s;
 }
 
