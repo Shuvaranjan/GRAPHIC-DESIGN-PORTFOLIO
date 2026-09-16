@@ -100,6 +100,13 @@ contactForm.addEventListener("submit", function (event) {
 
 });
 
+contactForm.addEventListener("keydown", function (event) {
+    if (event.ctrlKey && event.key === "Enter") {
+        event.preventDefault();
+        contactForm.requestSubmit();
+    }
+});
+
 closeIcon.addEventListener("click", function () {
     messageBox.style.right = "-100%";
 });
@@ -205,3 +212,9 @@ sReveal.reveal('.projects_card, .services_card, .experiance_card, .section-title
 
 
 
+document.getElementById("contact-form").addKeyListener("keydown", function (event) {
+    if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault(); // Prevent form submission on Enter key press
+        document.getElementById("contact-form").submit(); // Submit the form
+    }
+});
