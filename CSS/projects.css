@@ -1,81 +1,91 @@
 .nav {
-    position: fixed;
-    bottom: 1.5rem;
-    right: 50px;
-    background-color: transparent;
-    color: red;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    border: 1px dotted rgba(255, 0, 0, 0.475);
-    width: 100px;
-    margin-inline: auto;
-    padding: 1rem 2rem;
-    border-radius: 4rem;
-    z-index: var(--z-fixed);
-    transition: background-color .5s;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 50px;
+  background-color: transparent;
+  color: red;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px dotted rgba(255, 0, 0, 0.475);
+  width: 100px;
+  margin-inline: auto;
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  z-index: var(--z-fixed);
+  transition: background-color 0.5s;
 }
 
 .nav:hover {
-    background-color: red;
+  background-color: red;
 }
 
 .nav_list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav_link {
-    position: relative;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: transparent;
-    color: rgb(255, 0, 0);
-    font-size: 1.5rem;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-    transition: background-color .3s;
-    transition: color .5s ease, transform .4s ease;
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  color: rgb(255, 0, 0);
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  transition: background-color 0.3s;
+  transition:
+    color 0.5s ease,
+    transform 0.4s ease;
 }
 
 .nav:hover .nav_link {
-    color: white;
+  color: white;
 }
 
 .nav_link::before {
-    display: none !important;
+  display: none !important;
 }
 
 .backHome {
-    border-radius: 50%;
-    opacity: .7;
-    color: white;
-    transition: opacity .4s ease, color .4s ease;
+  border-radius: 50%;
+  opacity: 0.7;
+  color: white;
+  transition:
+    opacity 0.4s ease,
+    color 0.4s ease;
 }
 
 .backHome:hover {
-    opacity: 1;
-    color: red;
+  opacity: 1;
+  color: red;
 }
 
-
 .section-title a {
-    color: white;
+  color: white;
 }
 
 .section-title {
-    background-image: linear-gradient(to right, rgb(255, 55, 0), rgb(255, 102, 0), rgb(0, 238, 255), rgb(255, 55, 0), rgb(255, 102, 0));
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-size: 200%;
-    animation: animateBG 5s linear infinite;
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 55, 0),
+    rgb(255, 102, 0),
+    rgb(0, 238, 255),
+    rgb(255, 55, 0),
+    rgb(255, 102, 0)
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200%;
+  animation: animateBG 5s linear infinite;
 }
 
 @keyframes animateBG {
-    to {
-        background-position: 200%;
-    }
+  to {
+    background-position: 200%;
+  }
 }
