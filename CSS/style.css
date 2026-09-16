@@ -382,6 +382,8 @@ img {
     width: 190px;
     justify-self: center;
     align-self: flex-end;
+    transform: rotateY(180deg) translate(-1rem, 2rem) scale(1.7);
+
 }
 
 .info_desc {
@@ -1007,7 +1009,7 @@ textarea {
     }
 
     .about_img {
-        transform: translateY(2rem);
+        transform: translate(-1.1rem, -1rem) scale(1.2) !important;
     }
 
 }
@@ -1188,7 +1190,7 @@ textarea {
     }
 
     .about_img {
-        transform: translateY(-1rem);
+        transform: translate(-1rem, -1rem) scale(1.3);
     }
 
     .skills {
